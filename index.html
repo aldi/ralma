@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset='utf-8'>
+	<title>Ralma - Bulma plugin for Ractive.js</title>
+	<!-- JQuery -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+	<!-- Bulma -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.css">
+	<!-- Styles -->
+	<link rel="stylesheet" href="css/styles.css"> 
+	<!-- Font Awesome -->
+	<script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+	<!-- JS -->
+	<script src='js/main.js'></script>
+</head>
+<body>
+	<a href="https://github.com/aldi/ralma"><img style="position: absolute; top: 0; left: 0; border: 0;" src="https://camo.githubusercontent.com/c6625ac1f3ee0a12250227cf83ce904423abf351/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f6c6566745f677261795f3664366436642e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_left_gray_6d6d6d.png"></a>
+
+	<div class="column has-text-centered">
+		<p class="title is-2">Ralma <span class="tag">v0.1</span></p>
+		<p class="subtitle is-4">Bulma plugin for Ractive.js</p>
+
+		<p class="subtitle is-6">This Ractive plugin provides helper shortcuts for most Bulma widgets.<br> 
+		The goal of this plugin is to help you get started quickly and reduce the overly verbose code that Bulma tends to produce. <br> 
+	    It does not attempt to cover everything in Bulma, but rather offer the most common elements as shortcuts. <br> 
+        Sometimes, when you want something more specific or fancy, you can still use the original bootstrap markup.</p>
+
+	</div>
+
+	<div class="column has-text-centered">
+		<p>Downloads:</p>
+		<ul>
+			<li>Debug: <a href="bin/ralma.js">bin/ralma.js</a></li>
+			<li>Minified: <a href="bin/ralma.min.js">bin/ralma.min.js</a></li>
+		</ul>
+		<p class="subtitle is-5">A typical header would look like this:</p>
+	</div>
+
+	<div class="bd-example highlight-full header-code">
+		<figure class="highlight"><pre>
+<code class="language-html" data-lang="html"><span class="nt">&lt;head&gt;</span>
+<span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">"utf-8"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"viewport"</span> <span class="na">content=</span><span class="s">"width=device-width, initial-scale=1"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;title&gt;</span>Ralma!<span class="nt">&lt;/title&gt;</span>
+<span class="cp">&lt;!-- Bulma CSS --&gt;</span>
+<span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">href=</span><span class="s">"https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css"</span><span class="nt">&gt;</span>
+<span class="cp">&lt;!-- Ractive Framework --&gt;</span>
+<span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://cdn.jsdelivr.net/npm/ractive"</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="cp">&lt;!-- Ralma Plugin --&gt;</span>
+<span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"ralma.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="nt">&lt;/head&gt;</span></code><button class="button is-small bd-copy">Copy</button></pre>
+</figure>
+</div>
+
+
+<hr>
+	<div class="column" id="elements">
+		<p class="subtitle is-4">Select an element to explore:</p>
+	</div>
+
+
+	<div class="bd-content">
+		<nav class="bd-links">
+			<a class="bd-link" href="elements/button.html">
+
+				<h2 class="bd-link-name">
+					<figure class="bd-link-figure">
+
+						<span class="bd-link-icon has-text-success">
+							<svg class="svg-inline--fa fa-hand-pointer fa-w-14" aria-hidden="true" data-prefix="far" data-icon="hand-pointer" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg=""><path fill="currentColor" d="M358.182 179.361c-19.493-24.768-52.679-31.945-79.872-19.098-15.127-15.687-36.182-22.487-56.595-19.629V67c0-36.944-29.736-67-66.286-67S89.143 30.056 89.143 67v161.129c-19.909-7.41-43.272-5.094-62.083 8.872-29.355 21.795-35.793 63.333-14.55 93.152l109.699 154.001C134.632 501.59 154.741 512 176 512h178.286c30.802 0 57.574-21.5 64.557-51.797l27.429-118.999A67.873 67.873 0 0 0 448 326v-84c0-46.844-46.625-79.273-89.818-62.639zM80.985 279.697l27.126 38.079c8.995 12.626 29.031 6.287 29.031-9.283V67c0-25.12 36.571-25.16 36.571 0v175c0 8.836 7.163 16 16 16h6.857c8.837 0 16-7.164 16-16v-35c0-25.12 36.571-25.16 36.571 0v35c0 8.836 7.163 16 16 16H272c8.837 0 16-7.164 16-16v-21c0-25.12 36.571-25.16 36.571 0v21c0 8.836 7.163 16 16 16h6.857c8.837 0 16-7.164 16-16 0-25.121 36.571-25.16 36.571 0v84c0 1.488-.169 2.977-.502 4.423l-27.43 119.001c-1.978 8.582-9.29 14.576-17.782 14.576H176c-5.769 0-11.263-2.878-14.697-7.697l-109.712-154c-14.406-20.223 14.994-42.818 29.394-22.606zM176.143 400v-96c0-8.837 6.268-16 14-16h6c7.732 0 14 7.163 14 16v96c0 8.837-6.268 16-14 16h-6c-7.733 0-14-7.163-14-16zm75.428 0v-96c0-8.837 6.268-16 14-16h6c7.732 0 14 7.163 14 16v96c0 8.837-6.268 16-14 16h-6c-7.732 0-14-7.163-14-16zM327 400v-96c0-8.837 6.268-16 14-16h6c7.732 0 14 7.163 14 16v96c0 8.837-6.268 16-14 16h-6c-7.732 0-14-7.163-14-16z"></path></svg><!-- <i class="far fa-hand-pointer"></i> -->
+						</span>
+
+					</figure>
+					Button
+				</h2>
+				<p class="bd-link-subtitle">
+					The classic <strong>button</strong>, in different colors, sizes, and states
+				</p>
+			</a>
+
+			<a class="bd-link" href="elements/content.html">
+
+				<h2 class="bd-link-name">
+					<figure class="bd-link-figure">
+
+						<span class="bd-link-icon has-text-primary">
+							<svg class="svg-inline--fa fa-align-left fa-w-14" aria-hidden="true" data-prefix="fas" data-icon="align-left" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg=""><path fill="currentColor" d="M288 44v40c0 8.837-7.163 16-16 16H16c-8.837 0-16-7.163-16-16V44c0-8.837 7.163-16 16-16h256c8.837 0 16 7.163 16 16zM0 172v40c0 8.837 7.163 16 16 16h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16zm16 312h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm256-200H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16h256c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16z"></path></svg>
+						</span>
+
+					</figure>
+					Content
+				</h2>
+				<p class="bd-link-subtitle">
+					A single class to handle <strong>WYSIWYG</strong> generated content, where only <strong>HTML tags</strong> are available
+				</p>
+
+			</a>
+		</nav>
+
+
+	</div>
+
+			<!-- FOOTER -->
+			<hr>
+			<div class="hero-foot">
+					<div class="tabs is-centered">
+						<ul>
+							<li class="footer-text"><a href="https://www.aldiduzha.com" style="color:black;">Designed with&nbsp;<i class="fa fa-heart fa-fw" style="font-size: 10px; color:red;"></i>&nbsp;by Aldi Duzha</a></li>
+						</ul>
+				</div>
+			</div>
+
+			<!-- Clipboard.js -->
+			<script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+		</body>
+		</html>
+

@@ -1,0 +1,856 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset='utf-8'>
+	<title>Ralma - Bulma plugin for Ractive.js</title>
+	<!-- JQuery -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+	<!-- Bulma -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.css">
+	<!-- Styles -->
+	<link rel="stylesheet" href="../css/styles.css"> 
+	<!-- Font Awesome -->
+	<script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+	<!-- JS -->
+	<script src='../js/main.js'></script>
+</head>
+
+<body>
+	<a href="https://github.com/aldi/ralma"><img style="position: absolute; top: 0; left: 0; border: 0;" src="https://camo.githubusercontent.com/c6625ac1f3ee0a12250227cf83ce904423abf351/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f6c6566745f677261795f3664366436642e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_left_gray_6d6d6d.png"></a>
+
+	<div class="column has-text-centered">
+		<p class="title is-2">Bulma plugin for Ractive.js</p>
+		<p class="subtitle-2">This Ractive plugin provides helper shortcuts for most Bulma widgets.</p>
+
+	</div>
+
+	<nav class="breadcrumb is-centered" aria-label="breadcrumbs">
+		<ul>
+			<li>
+				<a href="../index.html">
+					<span class="icon is-small">
+						<i class="fas fa-home" aria-hidden="true"></i>
+					</span>
+					<span>Ralma</span>
+				</a>
+			</li>
+			<li>
+				<a href="../index.html#elements">
+					<span class="icon is-small">
+						<i class="fas fa-puzzle-piece" aria-hidden="true"></i>
+					</span>
+					<span>Elements</span>
+				</a>
+			</li>
+			<li class="is-active"><a href="#" aria-current="page">Button</a></li>
+		</ul>
+	</nav>
+
+	<header class="bd-header">
+		<div class="bd-header-titles">
+			<h1 class="title">
+				Button
+			</h1>
+			<p class="subtitle is-4">
+				The classic <strong>button</strong>, in different colors, sizes, and states
+			</p>
+			<div id="meta" class="field is-grouped is-grouped-multiline">
+				<div class="control">
+					<div class="tags has-addons">
+						<span class="tag">Colors</span>
+
+						<a class="tag is-success" href="#colors">Yes</a>
+
+					</div>
+				</div>
+
+				<div class="control">
+					<div class="tags has-addons">
+						<span class="tag">Sizes</span>
+
+						<a class="tag is-success" href="#sizes">Yes</a>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+
+
+	<div class="bd-content">
+		<div class="content">
+			<p>
+				The <strong>button</strong> is an essential element of any design. It's meant to look and behave as an <strong>interactive</strong> element of your page.
+			</p>
+		</div>
+		<div class="bd-snippet bd-is-vertical bd-is-2">
+			<div class="bd-snippet-preview ">
+				<div class="buttons">
+					<a class="button">Button</a>
+				</div>
+			</div>
+			<div class="bd-snippet-code highlight-full ">
+				<figure class="highlight">
+					<pre>
+<code class="language-html" data-lang="html"><span class="nt">&lt;button</span><span class="nt">&gt;</span>Button<span class="nt">&lt;/button&gt;</span></code>
+<button class="button is-small bd-copy">Copy</button>
+					</pre>
+				</figure>
+				</div>
+			</div>
+
+				<hr class="hr">
+
+				<h3 id="colors" class="title is-4 is-spaced bd-anchor-title">
+					<span class="bd-anchor-name">
+						Colors
+					</span>
+					<a class="bd-anchor-link" href="#colors"></a>
+				</h3>
+
+
+
+				<div class="bd-snippet bd-is-vertical bd-is-2">
+				<div class="bd-snippet-preview ">
+
+					<div class="buttons">
+
+						<a class="button is-white">White</a>
+						<a class="button is-light">Light</a>
+						<a class="button is-dark">Dark</a>
+						<a class="button is-black">Black</a>
+						<a class="button is-text">Text</a>
+
+					</div>
+
+</div>
+<div class="bd-snippet-code highlight-full ">
+	<figure class="highlight">
+		<pre>
+<code class="language-html" data-lang="html"><span class="nt">&lt;button </span><span class="s">white</span><span class="nt">&gt;</span>White<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button </span><span class="s">light</span><span class="nt">&gt;</span>White<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button </span><span class="s">dark</span><span class="nt">&gt;</span>White<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button </span><span class="s">black</span><span class="nt">&gt;</span>White<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button </span><span class="s">text</span><span class="nt">&gt;</span>White<span class="nt">&lt;/button&gt;</span>
+</code>
+<button class="button is-small bd-copy">Copy</button>
+		</pre>
+	</figure>
+</div>
+</div>
+
+
+
+
+					<div class="bd-snippet bd-is-vertical bd-is-2">
+					<div class="bd-snippet-preview ">
+						<div class="buttons">
+							<a class="button is-primary">Primary</a>
+							<a class="button is-link">Link</a>
+							<a class="button is-info">Info</a>
+							<a class="button is-success">Success</a>
+							<a class="button is-warning">Warning</a>
+							<a class="button is-danger">Danger</a>
+						</div>
+
+					</div>
+					<div class="bd-snippet-code highlight-full ">
+						<figure class="highlight">
+		<pre>
+<code class="language-html" data-lang="html"><span class="nt">&lt;button </span><span class="s">primary</span><span class="nt">&gt;</span>Primary<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button </span><span class="s">link</span><span class="nt">&gt;</span>Link<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button </span><span class="s">info</span><span class="nt">&gt;</span>Info<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button </span><span class="s">success</span><span class="nt">&gt;</span>Success<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button </span><span class="s">warning</span><span class="nt">&gt;</span>Warning<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button </span><span class="s">danger</span><span class="nt">&gt;</span>Danger<span class="nt">&lt;/button&gt;</span>
+</code>
+		<button class="button is-small bd-copy">Copy</button>
+		</pre>
+						</figure>
+							</div>
+						</div>
+
+
+
+						<hr class="hr" style="margin-bottom: 0;">
+
+						<h3 id="sizes" class="title is-4 is-spaced bd-anchor-title">
+							<span class="bd-anchor-name">
+								Sizes
+							</span>
+							<a class="bd-anchor-link" href="#sizes"></a>
+						</h3>
+
+
+
+						<div class="bd-snippet bd-is-vertical bd-is-2">
+						<div class="bd-snippet-preview">
+
+							<div class="buttons">
+
+								<a class="button is-small">Small</a>
+								<a class="button">Normal</a>
+								<a class="button is-medium">Medium</a>
+								<a class="button is-large">Large</a>
+
+							</div>
+
+						</div>
+						<div class="bd-snippet-code highlight-full ">
+							<figure class="highlight">
+								<pre>
+<code class="language-html" data-lang="html"><span class="nt">&lt;button </span><span class="s">small</span><span class="nt">&gt;</span>Small<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button </span><span class="s">normal</span><span class="nt">&gt;</span>Normal<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button </span><span class="s">medium</span><span class="nt">&gt;</span>Medium<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button </span><span class="s">large</span><span class="nt">&gt;</span>Large<span class="nt">&lt;/button&gt;</span>
+</code>
+<button class="button is-small bd-copy">Copy</button>
+								</pre>
+							</figure>
+						</div>
+					</div>
+
+
+
+							<hr class="hr" style="margin-bottom: 0;">
+
+							<h3 id="styles" class="title is-4 is-spaced bd-anchor-title">
+								<span class="bd-anchor-name">Styles</span>
+								<a class="bd-anchor-link" href="#styles"></a>
+							</h3>
+							<h4 class="subtitle">Outlined</h4>
+							<div class="bd-snippet bd-is-vertical bd-is-2">
+							<div class="bd-snippet-preview">
+								<div class="buttons">
+									<a class="button is-outlined">Outlined</a>
+									<a class="button is-primary is-outlined">Outlined</a>
+									<a class="button is-link is-outlined">Outlined</a>
+									<a class="button is-info is-outlined">Outlined</a>
+									<a class="button is-success is-outlined">Outlined</a>
+									<a class="button is-danger is-outlined">Outlined</a>
+								</div>
+							</div>
+							<div class="bd-snippet-code highlight-full ">
+								<figure class="highlight">
+									<pre>
+<code class="language-html" data-lang="html"><span class="nt">&lt;button </span><span class="s">outlined</span><span class="nt">&gt;</span>Outlined<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button </span><span class="s">primary outlined</span><span class="nt">&gt;</span>Outlined<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button </span><span class="s">link outlined</span><span class="nt">&gt;</span>Outlined<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button </span><span class="s">info outlined</span><span class="nt">&gt;</span>Outlined<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button </span><span class="s">success outlined</span><span class="nt">&gt;</span>Outlined<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button </span><span class="s">danger outlined</span><span class="nt">&gt;</span>Outlined<span class="nt">&lt;/button&gt;</span>
+</code>
+<button class="button is-small bd-copy">Copy</button>
+									</pre>
+								</figure>
+									</div>
+								</div>
+
+
+
+								<h4 class="subtitle">Inverted (the text color becomes the background color, and vice-versa)</h4>
+
+								<div class="columns">
+									<div class="column">
+										<div class="bd-callout is-primary">
+											<div class="buttons">
+												<a class="button is-primary is-inverted">Inverted</a>
+												<a class="button is-link is-inverted">Inverted</a>
+												<a class="button is-info is-inverted">Inverted</a>
+												<a class="button is-success is-inverted">Inverted</a>
+												<a class="button is-danger is-inverted">Inverted</a>
+											</div>
+										</div>
+									</div>
+									<div class="column">
+										<figure class="highlight">
+											<pre>
+<code class="language-html" data-lang="html"><span class="nt">&lt;button </span><span class="s">primary inverted</span><span class="nt">&gt;</span>Outlined<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button </span><span class="s">link inverted</span><span class="nt">&gt;</span>Outlined<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button </span><span class="s">info inverted</span><span class="nt">&gt;</span>Outlined<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button </span><span class="s">success inverted</span><span class="nt">&gt;</span>Outlined<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button </span><span class="s">danger inverted</span><span class="nt">&gt;</span>Outlined<span class="nt">&lt;/button&gt;</span>
+</code>
+<button class="button is-small bd-copy">Copy</button>
+											</pre>
+										</figure>
+											</div>
+										</div>
+
+										<h4 class="subtitle">Invert Outlined (the invert color becomes the text and border colors)</h4>
+
+										<div class="columns">
+											<div class="column">
+												<div class="bd-callout is-primary">
+													<div class="buttons">
+
+														<a class="button is-primary is-inverted is-outlined">Invert Outlined</a>
+														<a class="button is-link is-inverted is-outlined">Invert Outlined</a>
+														<a class="button is-info is-inverted is-outlined">Invert Outlined</a>
+														<a class="button is-success is-inverted is-outlined">Invert Outlined</a>
+														<a class="button is-danger is-inverted is-outlined">Invert Outlined</a>
+
+													</div>
+												</div>
+											</div>
+											<div class="column">
+												<figure class="highlight">
+													<pre>
+<code class="language-html" data-lang="html"><span class="nt">&lt;button </span><span class="s">primary inverted outlined</span><span class="nt">&gt;</span>Invert Outlined<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button </span><span class="s">link inverted outlined</span><span class="nt">&gt;</span>Invert Outlined<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button </span><span class="s">info inverted outlined</span><span class="nt">&gt;</span>Invert Outlined<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button </span><span class="s">success inverted outlined</span><span class="nt">&gt;</span>Invert Outlined<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button </span><span class="s">danger inverted outlined</span><span class="nt">&gt;</span>Invert Outlined<span class="nt">&lt;/button&gt;</span>
+</code>
+<button class="button is-small bd-copy">Copy</button>
+											</pre>
+										</figure>
+												</div>
+												</div>
+
+												<h4 class="subtitle">Rounded buttons</h4>
+
+												<div class="columns">
+													<div class="column">
+														<div class="buttons">
+
+															<a class="button is-rounded">Rounded</a>
+															<a class="button is-primary is-rounded">Rounded</a>
+															<a class="button is-link is-rounded">Rounded</a>
+															<a class="button is-info is-rounded">Rounded</a>
+															<a class="button is-success is-rounded">Rounded</a>
+															<a class="button is-danger is-rounded">Rounded</a>
+
+														</div>
+													</div>
+													<div class="column">
+														<figure class="highlight">
+															<pre>
+<code class="language-html" data-lang="html"><span class="nt">&lt;button </span><span class="s">rounded</span><span class="nt">&gt;</span>Rounded<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button </span><span class="s">primary rounded</span><span class="nt">&gt;</span>Rounded<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button </span><span class="s">link rounded</span><span class="nt">&gt;</span>Rounded<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button </span><span class="s">info rounded</span><span class="nt">&gt;</span>Rounded<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button </span><span class="s">success rounded</span><span class="nt">&gt;</span>Rounded<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button </span><span class="s">danger rounded</span><span class="nt">&gt;</span>Rounded<span class="nt">&lt;/button&gt;</span>
+</code>
+<button class="button is-small bd-copy">Copy</button>
+											</pre>
+										</figure>
+															</div>
+														</div>
+
+														<hr class="hr" style="margin-bottom: 0;">
+
+														<h3 id="states" class="title is-4 is-spaced bd-anchor-title">
+															<span class="bd-anchor-name">
+																States
+															</span>
+															<a class="bd-anchor-link" href="#states">
+																#
+															</a>
+														</h3>
+
+
+														<h4 class="subtitle">Normal</h4>
+
+
+														<div class="bd-snippet bd-is-vertical bd-is-2">
+														<div class="bd-snippet-preview">
+															<div class="buttons">
+																<a class="button">Normal</a>
+																<a class="button is-primary">Normal</a>
+																<a class="button is-link">Normal</a>
+																<a class="button is-info">Normal</a>
+																<a class="button is-success">Normal</a>
+																<a class="button is-warning">Normal</a>
+																<a class="button is-danger">Normal</a>
+															</div>
+														</div>
+														<div class="bd-snippet-code highlight-full ">
+															<figure class="highlight">
+																<pre>
+<code class="language-html" data-lang="html"><span class="nt">&lt;button </span><span class="s">primary</span><span class="nt">&gt;</span>Normal<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button </span><span class="s">link</span><span class="nt">&gt;</span>Normal<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button </span><span class="s">info</span><span class="nt">&gt;</span>Normal<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button </span><span class="s">success</span><span class="nt">&gt;</span>Normal<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button </span><span class="s">danger</span><span class="nt">&gt;</span>Normal<span class="nt">&lt;/button&gt;</span>
+</code>
+<button class="button is-small bd-copy">Copy</button>
+											</pre>
+										</figure>
+														</div>
+														</div>
+														<h4 class="subtitle">Hover</h4>
+														<div class="bd-snippet bd-is-vertical bd-is-2">
+															<div class="bd-snippet-preview">
+																<div class="buttons">
+																	<a class="button is-hovered">Hover</a>
+																	<a class="button is-primary is-hovered">Hover</a>
+																	<a class="button is-link is-hovered">Hover</a>
+																	<a class="button is-info is-hovered">Hover</a>
+																	<a class="button is-success is-hovered">Hover</a>
+																	<a class="button is-warning is-hovered">Hover</a>
+																	<a class="button is-danger is-hovered">Hover</a>
+																</div>
+															</div>
+															<div class="bd-snippet-code highlight-full ">
+																<figure class="highlight">
+																	<pre>
+<code class="language-html" data-lang="html"><span class="nt">&lt;button </span><span class="s">hovered</span><span class="nt">&gt;</span>Hover<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button </span><span class="s">primary hovered</span><span class="nt">&gt;</span>Hover<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button </span><span class="s">link hovered</span><span class="nt">&gt;</span>Hover<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button </span><span class="s">info hovered</span><span class="nt">&gt;</span>Hover<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button </span><span class="s">success hovered</span><span class="nt">&gt;</span>Hover<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button </span><span class="s">danger hovered</span><span class="nt">&gt;</span>Hover<span class="nt">&lt;/button&gt;</span>
+</code>
+
+<button class="button is-small bd-copy">Copy</button>
+											</pre>
+										</figure>
+															</div>
+														</div>
+
+
+
+																<h4 class="subtitle">Focus</h4>
+
+
+																<div class="bd-snippet bd-is-vertical bd-is-2">
+																<div class="bd-snippet-preview">
+																	<div class="buttons">
+																		<a class="button is-focused">Focus</a>
+																		<a class="button is-primary is-focused">Focus</a>
+																		<a class="button is-link is-focused">Focus</a>
+																		<a class="button is-info is-focused">Focus</a>
+																		<a class="button is-success is-focused">Focus</a>
+																		<a class="button is-warning is-focused">Focus</a>
+																		<a class="button is-danger is-focused">Focus</a>
+																	</div>
+																</div>
+																<div class="bd-snippet-code highlight-full">
+																	<figure class="highlight">
+																		<pre>
+<code class="language-html" data-lang="html"><span class="nt">&lt;button </span><span class="s">focused</span><span class="nt">&gt;</span>Focus<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button </span><span class="s">primary focused</span><span class="nt">&gt;</span>Focus<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button </span><span class="s">link focused</span><span class="nt">&gt;</span>Focus<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button </span><span class="s">info focused</span><span class="nt">&gt;</span>Focus<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button </span><span class="s">success focused</span><span class="nt">&gt;</span>Focus<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button </span><span class="s">danger focused</span><span class="nt">&gt;</span>Focus<span class="nt">&lt;/button&gt;</span>
+</code>
+<button class="button is-small bd-copy">Copy</button>
+																		</pre>
+																		</figure>
+																		</div>
+																	</div>
+
+
+
+																	<h4 class="subtitle">Active</h4>
+
+
+																	<div class="bd-snippet bd-is-vertical bd-is-2">
+																		<div class="bd-snippet-preview">
+
+																			<div class="buttons">
+																				<a class="button is-active">Active</a>
+																				<a class="button is-primary is-active">Active</a>
+																				<a class="button is-link is-active">Active</a>
+																				<a class="button is-info is-active">Active</a>
+																				<a class="button is-success is-active">Active</a>
+																				<a class="button is-warning is-active">Active</a>
+																				<a class="button is-danger is-active">Active</a>
+																			</div>
+
+																		</div>
+																		<div class="bd-snippet-code highlight-full">
+																			<figure class="highlight">
+																			<pre>
+<code class="language-html" data-lang="html"><span class="nt">&lt;button </span><span class="s">active</span><span class="nt">&gt;</span>Active<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button </span><span class="s">primary active</span><span class="nt">&gt;</span>Active<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button </span><span class="s">link active</span><span class="nt">&gt;</span>Active<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button </span><span class="s">info active</span><span class="nt">&gt;</span>Active<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button </span><span class="s">success active</span><span class="nt">&gt;</span>Active<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button </span><span class="s">danger active</span><span class="nt">&gt;</span>Active<span class="nt">&lt;/button&gt;</span>
+</code>
+<button class="button is-small bd-copy">Copy</button>
+																			</pre>
+																			</figure>
+																		</div>
+																	</div>
+
+
+
+																		<h4 class="subtitle">Loading</h4>
+
+																		<div class="columns">
+																			<div class="column">
+																				<div class="buttons">
+																					<a class="button is-loading">Loading</a>
+																					<a class="button is-primary is-loading">Loading</a>
+																					<a class="button is-link is-loading">Loading</a>
+																					<a class="button is-info is-loading">Loading</a>
+																					<a class="button is-success is-loading">Loading</a>
+																					<a class="button is-warning is-loading">Loading</a>
+																					<a class="button is-danger is-loading">Loading</a>
+																				</div>
+																				<div class="message is-info">
+																					<div class="message-body">
+																						<p>
+																							Since the loading spinner is implemented using the <code>:after</code> pseudo-element, it is not supported by the <code>&lt;input type="submit"&gt;</code> element.
+																						</p>
+																					</div>
+																				</div>
+																			</div>
+																			<div class="column">
+																				<figure class="highlight">
+																					<pre>
+<code class="language-html" data-lang="html"><span class="nt">&lt;button </span><span class="s">loading</span><span class="nt">&gt;</span>Loading<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button </span><span class="s">primary loading</span><span class="nt">&gt;</span>Loading<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button </span><span class="s">link loading</span><span class="nt">&gt;</span>Loading<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button </span><span class="s">info loading</span><span class="nt">&gt;</span>Loading<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button </span><span class="s">succes loading</span><span class="nt">&gt;</span>Loading<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button </span><span class="s">danger loading</span><span class="nt">&gt;</span>Loading<span class="nt">&lt;/button&gt;</span>
+</code><button class="button is-small bd-copy">Copy</button></pre></figure>
+																					</div>
+																				</div>
+																					<h4 class="subtitle">Disabled</h4>
+
+																					<div class="columns">
+																						<div class="column">
+																							<div class="buttons">
+
+																								<a class="button" title="Disabled button" disabled="">Disabled</a>
+																								<a class="button is-primary" title="Disabled button" disabled="">Disabled</a>
+																								<a class="button is-link" title="Disabled button" disabled="">Disabled</a>
+																								<a class="button is-info" title="Disabled button" disabled="">Disabled</a>
+																								<a class="button is-success" title="Disabled button" disabled="">Disabled</a>
+																								<a class="button is-warning" title="Disabled button" disabled="">Disabled</a>
+																								<a class="button is-danger" title="Disabled button" disabled="">Disabled</a>
+
+																							</div>
+																							<div class="message is-danger">
+																								<div class="message-body">
+																									<p>The <code>is-disabled</code> CSS class has been deprecated in favor of the <code>disabled</code> HTML attribute. <a href="https://github.com/jgthms/bulma/issues/276">Learn more</a></p>
+																								</div>
+																							</div>
+																						</div>
+																						<div class="column">
+																							<figure class="highlight">
+																								<pre>
+<code class="language-html" data-lang="html"><span class="nt">&lt;button </span><span class="s">loading</span><span class="nt">&gt;</span>Loading<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button </span><span class="s">primary loading</span><span class="nt">&gt;</span>Loading<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button </span><span class="s">link loading</span><span class="nt">&gt;</span>Loading<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button </span><span class="s">info loading</span><span class="nt">&gt;</span>Loading<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button </span><span class="s">succes loading</span><span class="nt">&gt;</span>Loading<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button </span><span class="s">danger loading</span><span class="nt">&gt;</span>Loading<span class="nt">&lt;/button&gt;</span>
+</code><button class="button is-small bd-copy">Copy</button>
+
+<code class="language-html" data-lang="html"><span class="nt">&lt;button</span> <span class="na">title=</span><span class="s">"Disabled button"</span> <span class="na">disabled</span><span class="nt">&gt;</span>Disabled<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="s">primary</span> <span class="na">title=</span><span class="s">"Disabled button"</span> <span class="na">disabled</span><span class="nt">&gt;</span>Disabled<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="s">link</span> <span class="na">title=</span><span class="s">"Disabled button"</span> <span class="na">disabled</span><span class="nt">&gt;</span>Disabled<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="s">info</span> <span class="na">title=</span><span class="s">"Disabled button"</span> <span class="na">disabled</span><span class="nt">&gt;</span>Disabled<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="s">success</span> <span class="na">title=</span><span class="s">"Disabled button"</span> <span class="na">disabled</span><span class="nt">&gt;</span>Disabled<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="s">warning</span> <span class="na">title=</span><span class="s">"Disabled button"</span> <span class="na">disabled</span><span class="nt">&gt;</span>Disabled<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="s">danger</span> <span class="na">title=</span><span class="s">"Disabled button"</span> <span class="na">disabled</span><span class="nt">&gt;</span>Disabled<span class="nt">&lt;/button&gt;</span>
+</code><button class="button is-small bd-copy">Copy</button></pre></figure>
+																								</div>
+																							</div>
+
+																							<h4 class="subtitle">With Font Awesome icons</h4>
+
+
+																							<div class="bd-snippet bd-is-vertical bd-is-clipped bd-is-2">
+																							<div class="bd-snippet-preview ">
+
+
+																								<p class="buttons">
+																									<a class="button">
+																										<span class="icon is-small">
+																											<svg class="svg-inline--fa fa-bold fa-w-12" aria-hidden="true" data-prefix="fas" data-icon="bold" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" data-fa-i2svg=""><path fill="currentColor" d="M304.793 243.891c33.639-18.537 53.657-54.16 53.657-95.693 0-48.236-26.25-87.626-68.626-104.179C265.138 34.01 240.849 32 209.661 32H24c-8.837 0-16 7.163-16 16v33.049c0 8.837 7.163 16 16 16h33.113v318.53H24c-8.837 0-16 7.163-16 16V464c0 8.837 7.163 16 16 16h195.69c24.203 0 44.834-1.289 66.866-7.584C337.52 457.193 376 410.647 376 350.014c0-52.168-26.573-91.684-71.207-106.123zM142.217 100.809h67.444c16.294 0 27.536 2.019 37.525 6.717 15.828 8.479 24.906 26.502 24.906 49.446 0 35.029-20.32 56.79-53.029 56.79h-76.846V100.809zm112.642 305.475c-10.14 4.056-22.677 4.907-31.409 4.907h-81.233V281.943h84.367c39.645 0 63.057 25.38 63.057 63.057.001 28.425-13.66 52.483-34.782 61.284z"></path></svg><!-- <i class="fas fa-bold"></i> -->
+																										</span>
+																									</a>
+																									<a class="button">
+																										<span class="icon is-small">
+																											<svg class="svg-inline--fa fa-italic fa-w-10" aria-hidden="true" data-prefix="fas" data-icon="italic" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" data-fa-i2svg=""><path fill="currentColor" d="M204.758 416h-33.849l62.092-320h40.725a16 16 0 0 0 15.704-12.937l6.242-32C297.599 41.184 290.034 32 279.968 32H120.235a16 16 0 0 0-15.704 12.937l-6.242 32C96.362 86.816 103.927 96 113.993 96h33.846l-62.09 320H46.278a16 16 0 0 0-15.704 12.935l-6.245 32C22.402 470.815 29.967 480 40.034 480h158.479a16 16 0 0 0 15.704-12.935l6.245-32c1.927-9.88-5.638-19.065-15.704-19.065z"></path></svg><!-- <i class="fas fa-italic"></i> -->
+																										</span>
+																									</a>
+																									<a class="button">
+																										<span class="icon is-small">
+																											<svg class="svg-inline--fa fa-underline fa-w-14" aria-hidden="true" data-prefix="fas" data-icon="underline" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg=""><path fill="currentColor" d="M224.264 388.24c-91.669 0-156.603-51.165-156.603-151.392V64H39.37c-8.837 0-16-7.163-16-16V16c0-8.837 7.163-16 16-16h137.39c8.837 0 16 7.163 16 16v32c0 8.837-7.163 16-16 16h-28.813v172.848c0 53.699 28.314 79.444 76.317 79.444 46.966 0 75.796-25.434 75.796-79.965V64h-28.291c-8.837 0-16-7.163-16-16V16c0-8.837 7.163-16 16-16h136.868c8.837 0 16 7.163 16 16v32c0 8.837-7.163 16-16 16h-28.291v172.848c0 99.405-64.881 151.392-156.082 151.392zM16 448h416c8.837 0 16 7.163 16 16v32c0 8.837-7.163 16-16 16H16c-8.837 0-16-7.163-16-16v-32c0-8.837 7.163-16 16-16z"></path></svg><!-- <i class="fas fa-underline"></i> -->
+																										</span>
+																									</a>
+																								</p>
+																								<p class="buttons">
+																									<a class="button">
+																										<span class="icon">
+																											<svg class="svg-inline--fa fa-github fa-w-16" aria-hidden="true" data-prefix="fab" data-icon="github" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" data-fa-i2svg=""><path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg><!-- <i class="fab fa-github"></i> -->
+																										</span>
+																										<span>GitHub</span>
+																									</a>
+																									<a class="button is-primary">
+																										<span class="icon">
+																											<svg class="svg-inline--fa fa-twitter fa-w-16" aria-hidden="true" data-prefix="fab" data-icon="twitter" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"></path></svg><!-- <i class="fab fa-twitter"></i> -->
+																										</span>
+																										<span>Twitter</span>
+																									</a>
+																									<a class="button is-success">
+																										<span class="icon is-small">
+																											<svg class="svg-inline--fa fa-check fa-w-16" aria-hidden="true" data-prefix="fas" data-icon="check" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z"></path></svg><!-- <i class="fas fa-check"></i> -->
+																										</span>
+																										<span>Save</span>
+																									</a>
+																									<a class="button is-danger is-outlined">
+																										<span>Delete</span>
+																										<span class="icon is-small">
+																											<svg class="svg-inline--fa fa-times fa-w-12" aria-hidden="true" data-prefix="fas" data-icon="times" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" data-fa-i2svg=""><path fill="currentColor" d="M323.1 441l53.9-53.9c9.4-9.4 9.4-24.5 0-33.9L279.8 256l97.2-97.2c9.4-9.4 9.4-24.5 0-33.9L323.1 71c-9.4-9.4-24.5-9.4-33.9 0L192 168.2 94.8 71c-9.4-9.4-24.5-9.4-33.9 0L7 124.9c-9.4 9.4-9.4 24.5 0 33.9l97.2 97.2L7 353.2c-9.4 9.4-9.4 24.5 0 33.9L60.9 441c9.4 9.4 24.5 9.4 33.9 0l97.2-97.2 97.2 97.2c9.3 9.3 24.5 9.3 33.9 0z"></path></svg><!-- <i class="fas fa-times"></i> -->
+																										</span>
+																									</a>
+																								</p>
+																								<p class="buttons">
+																									<a class="button is-small">
+																										<span class="icon is-small">
+																											<svg class="svg-inline--fa fa-github fa-w-16" aria-hidden="true" data-prefix="fab" data-icon="github" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" data-fa-i2svg=""><path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg><!-- <i class="fab fa-github"></i> -->
+																										</span>
+																										<span>GitHub</span>
+																									</a>
+																									<a class="button">
+																										<span class="icon">
+																											<svg class="svg-inline--fa fa-github fa-w-16" aria-hidden="true" data-prefix="fab" data-icon="github" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" data-fa-i2svg=""><path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg><!-- <i class="fab fa-github"></i> -->
+																										</span>
+																										<span>GitHub</span>
+																									</a>
+																									<a class="button is-medium">
+																										<span class="icon">
+																											<svg class="svg-inline--fa fa-github fa-w-16" aria-hidden="true" data-prefix="fab" data-icon="github" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" data-fa-i2svg=""><path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg><!-- <i class="fab fa-github"></i> -->
+																										</span>
+																										<span>GitHub</span>
+																									</a>
+																									<a class="button is-large">
+																										<span class="icon is-medium">
+																											<svg class="svg-inline--fa fa-github fa-w-16" aria-hidden="true" data-prefix="fab" data-icon="github" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" data-fa-i2svg=""><path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg><!-- <i class="fab fa-github"></i> -->
+																										</span>
+																										<span>GitHub</span>
+																									</a>
+																								</p>
+
+
+																							</div>
+																							<div class="bd-snippet-code  ">
+																								<figure class="highlight">
+																									<pre>
+<code class="language-html" data-lang="html"><span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"buttons"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;button</span><span class="nt">&gt;</span>
+<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"icon is-small"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"fas fa-bold"</span><span class="nt">&gt;&lt;/i&gt;</span>
+<span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;/button</span><span class="nt">&gt;</span>
+<span class="nt">&lt;button</span><span class="nt">&gt;</span>
+<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"icon is-small"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"fas fa-italic"</span><span class="nt">&gt;&lt;/i&gt;</span>
+<span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;/button</span><span class="nt">&gt;</span>
+<span class="nt">&lt;button</span><span class="nt">&gt;</span>
+<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"icon is-small"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"fas fa-underline"</span><span class="nt">&gt;&lt;/i&gt;</span>
+<span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;/button</span><span class="nt">&gt;</span>
+<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"buttons"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;button</span><span class="nt">&gt;</span>
+<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"icon"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"fab fa-github"</span><span class="nt">&gt;&lt;/i&gt;</span>
+<span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;span&gt;</span>GitHub<span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;/button</span><span class="nt">&gt;</span>
+<span class="nt">&lt;button</span> <span class="s">primary</span><span class="nt">&gt;</span>
+<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"icon"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"fab fa-twitter"</span><span class="nt">&gt;&lt;/i&gt;</span>
+<span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;span&gt;</span>Twitter<span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;/button</span><span class="nt">&gt;</span>
+<span class="nt">&lt;button</span> <span class="s">success</span><span class="nt">&gt;</span>
+<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"icon is-small"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"fas fa-check"</span><span class="nt">&gt;&lt;/i&gt;</span>
+<span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;span&gt;</span>Save<span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;/button</span><span class="nt">&gt;</span>
+<span class="nt">&lt;button</span> <span class="s">danger outlined</span><span class="nt">&gt;</span>
+<span class="nt">&lt;span&gt;</span>Delete<span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"icon is-small"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"fas fa-times"</span><span class="nt">&gt;&lt;/i&gt;</span>
+<span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;/button</span><span class="nt">&gt;</span>
+<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"buttons"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;button</span> <span class="s">small</span><span class="nt">&gt;</span>
+<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"icon is-small"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"fab fa-github"</span><span class="nt">&gt;&lt;/i&gt;</span>
+<span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;span&gt;</span>GitHub<span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span><span class="nt">&gt;</span>
+<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"icon"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"fab fa-github"</span><span class="nt">&gt;&lt;/i&gt;</span>
+<span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;span&gt;</span>GitHub<span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="s">medium</span><span class="nt">&gt;</span>
+<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"icon"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"fab fa-github"</span><span class="nt">&gt;&lt;/i&gt;</span>
+<span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;span&gt;</span>GitHub<span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;/button</span><span class="nt">&gt;</span>
+<span class="nt">&lt;button</span> <span class="s">large</span><span class="nt">&gt;</span>
+<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"icon is-medium"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"fab fa-github"</span><span class="nt">&gt;&lt;/i&gt;</span>
+<span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;span&gt;</span>GitHub<span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;/button</span><span class="nt">&gt;</span>
+<span class="nt">&lt;/p&gt;</span></code><button class="button is-small bd-copy">Copy</button><button class="button is-small bd-expand">Expand</button></pre></figure>
+																									</div>
+																								</div>
+
+																								<div class="columns">
+																									<div class="column">
+																										<div class="content">
+																											<p>
+																												If the button only contains an icon, Bulma will make sure the button remains <strong>square</strong>, no matter the size of the button <em>or</em> of the icon.
+																											</p>
+																										</div>
+
+																										<p class="buttons">
+																											<a class="button is-small">
+																												<span class="icon is-small">
+																													<svg class="svg-inline--fa fa-heading fa-w-16" aria-hidden="true" data-prefix="fas" data-icon="heading" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M496 80V48c0-8.837-7.163-16-16-16H320c-8.837 0-16 7.163-16 16v32c0 8.837 7.163 16 16 16h37.621v128H154.379V96H192c8.837 0 16-7.163 16-16V48c0-8.837-7.163-16-16-16H32c-8.837 0-16 7.163-16 16v32c0 8.837 7.163 16 16 16h37.275v320H32c-8.837 0-16 7.163-16 16v32c0 8.837 7.163 16 16 16h160c8.837 0 16-7.163 16-16v-32c0-8.837-7.163-16-16-16h-37.621V288H357.62v128H320c-8.837 0-16 7.163-16 16v32c0 8.837 7.163 16 16 16h160c8.837 0 16-7.163 16-16v-32c0-8.837-7.163-16-16-16h-37.275V96H480c8.837 0 16-7.163 16-16z"></path></svg><!-- <i class="fas fa-heading"></i> -->
+																												</span>
+																											</a>
+																										</p>
+																										<p class="buttons">
+																											<a class="button">
+																												<span class="icon is-small">
+																													<svg class="svg-inline--fa fa-heading fa-w-16" aria-hidden="true" data-prefix="fas" data-icon="heading" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M496 80V48c0-8.837-7.163-16-16-16H320c-8.837 0-16 7.163-16 16v32c0 8.837 7.163 16 16 16h37.621v128H154.379V96H192c8.837 0 16-7.163 16-16V48c0-8.837-7.163-16-16-16H32c-8.837 0-16 7.163-16 16v32c0 8.837 7.163 16 16 16h37.275v320H32c-8.837 0-16 7.163-16 16v32c0 8.837 7.163 16 16 16h160c8.837 0 16-7.163 16-16v-32c0-8.837-7.163-16-16-16h-37.621V288H357.62v128H320c-8.837 0-16 7.163-16 16v32c0 8.837 7.163 16 16 16h160c8.837 0 16-7.163 16-16v-32c0-8.837-7.163-16-16-16h-37.275V96H480c8.837 0 16-7.163 16-16z"></path></svg><!-- <i class="fas fa-heading"></i> -->
+																												</span>
+																											</a>
+																											<a class="button">
+																												<span class="icon">
+																													<svg class="svg-inline--fa fa-heading fa-w-16 fa-lg" aria-hidden="true" data-prefix="fas" data-icon="heading" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M496 80V48c0-8.837-7.163-16-16-16H320c-8.837 0-16 7.163-16 16v32c0 8.837 7.163 16 16 16h37.621v128H154.379V96H192c8.837 0 16-7.163 16-16V48c0-8.837-7.163-16-16-16H32c-8.837 0-16 7.163-16 16v32c0 8.837 7.163 16 16 16h37.275v320H32c-8.837 0-16 7.163-16 16v32c0 8.837 7.163 16 16 16h160c8.837 0 16-7.163 16-16v-32c0-8.837-7.163-16-16-16h-37.621V288H357.62v128H320c-8.837 0-16 7.163-16 16v32c0 8.837 7.163 16 16 16h160c8.837 0 16-7.163 16-16v-32c0-8.837-7.163-16-16-16h-37.275V96H480c8.837 0 16-7.163 16-16z"></path></svg><!-- <i class="fas fa-heading fa-lg"></i> -->
+																												</span>
+																											</a>
+																										</p>
+																										<p class="buttons">
+																											<a class="button is-medium">
+																												<span class="icon is-small">
+																													<svg class="svg-inline--fa fa-heading fa-w-16" aria-hidden="true" data-prefix="fas" data-icon="heading" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M496 80V48c0-8.837-7.163-16-16-16H320c-8.837 0-16 7.163-16 16v32c0 8.837 7.163 16 16 16h37.621v128H154.379V96H192c8.837 0 16-7.163 16-16V48c0-8.837-7.163-16-16-16H32c-8.837 0-16 7.163-16 16v32c0 8.837 7.163 16 16 16h37.275v320H32c-8.837 0-16 7.163-16 16v32c0 8.837 7.163 16 16 16h160c8.837 0 16-7.163 16-16v-32c0-8.837-7.163-16-16-16h-37.621V288H357.62v128H320c-8.837 0-16 7.163-16 16v32c0 8.837 7.163 16 16 16h160c8.837 0 16-7.163 16-16v-32c0-8.837-7.163-16-16-16h-37.275V96H480c8.837 0 16-7.163 16-16z"></path></svg><!-- <i class="fas fa-heading"></i> -->
+																												</span>
+																											</a>
+																											<a class="button is-medium">
+																												<span class="icon">
+																													<svg class="svg-inline--fa fa-heading fa-w-16 fa-lg" aria-hidden="true" data-prefix="fas" data-icon="heading" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M496 80V48c0-8.837-7.163-16-16-16H320c-8.837 0-16 7.163-16 16v32c0 8.837 7.163 16 16 16h37.621v128H154.379V96H192c8.837 0 16-7.163 16-16V48c0-8.837-7.163-16-16-16H32c-8.837 0-16 7.163-16 16v32c0 8.837 7.163 16 16 16h37.275v320H32c-8.837 0-16 7.163-16 16v32c0 8.837 7.163 16 16 16h160c8.837 0 16-7.163 16-16v-32c0-8.837-7.163-16-16-16h-37.621V288H357.62v128H320c-8.837 0-16 7.163-16 16v32c0 8.837 7.163 16 16 16h160c8.837 0 16-7.163 16-16v-32c0-8.837-7.163-16-16-16h-37.275V96H480c8.837 0 16-7.163 16-16z"></path></svg><!-- <i class="fas fa-heading fa-lg"></i> -->
+																												</span>
+																											</a>
+																											<a class="button is-medium">
+																												<span class="icon is-medium">
+																													<svg class="svg-inline--fa fa-heading fa-w-16 fa-2x" aria-hidden="true" data-prefix="fas" data-icon="heading" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M496 80V48c0-8.837-7.163-16-16-16H320c-8.837 0-16 7.163-16 16v32c0 8.837 7.163 16 16 16h37.621v128H154.379V96H192c8.837 0 16-7.163 16-16V48c0-8.837-7.163-16-16-16H32c-8.837 0-16 7.163-16 16v32c0 8.837 7.163 16 16 16h37.275v320H32c-8.837 0-16 7.163-16 16v32c0 8.837 7.163 16 16 16h160c8.837 0 16-7.163 16-16v-32c0-8.837-7.163-16-16-16h-37.621V288H357.62v128H320c-8.837 0-16 7.163-16 16v32c0 8.837 7.163 16 16 16h160c8.837 0 16-7.163 16-16v-32c0-8.837-7.163-16-16-16h-37.275V96H480c8.837 0 16-7.163 16-16z"></path></svg><!-- <i class="fas fa-heading fa-2x"></i> -->
+																												</span>
+																											</a>
+																										</p>
+																										<p class="buttons">
+																											<a class="button is-large">
+																												<span class="icon is-small">
+																													<svg class="svg-inline--fa fa-heading fa-w-16" aria-hidden="true" data-prefix="fas" data-icon="heading" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M496 80V48c0-8.837-7.163-16-16-16H320c-8.837 0-16 7.163-16 16v32c0 8.837 7.163 16 16 16h37.621v128H154.379V96H192c8.837 0 16-7.163 16-16V48c0-8.837-7.163-16-16-16H32c-8.837 0-16 7.163-16 16v32c0 8.837 7.163 16 16 16h37.275v320H32c-8.837 0-16 7.163-16 16v32c0 8.837 7.163 16 16 16h160c8.837 0 16-7.163 16-16v-32c0-8.837-7.163-16-16-16h-37.621V288H357.62v128H320c-8.837 0-16 7.163-16 16v32c0 8.837 7.163 16 16 16h160c8.837 0 16-7.163 16-16v-32c0-8.837-7.163-16-16-16h-37.275V96H480c8.837 0 16-7.163 16-16z"></path></svg><!-- <i class="fas fa-heading"></i> -->
+																												</span>
+																											</a>
+																											<a class="button is-large">
+																												<span class="icon">
+																													<svg class="svg-inline--fa fa-heading fa-w-16 fa-lg" aria-hidden="true" data-prefix="fas" data-icon="heading" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M496 80V48c0-8.837-7.163-16-16-16H320c-8.837 0-16 7.163-16 16v32c0 8.837 7.163 16 16 16h37.621v128H154.379V96H192c8.837 0 16-7.163 16-16V48c0-8.837-7.163-16-16-16H32c-8.837 0-16 7.163-16 16v32c0 8.837 7.163 16 16 16h37.275v320H32c-8.837 0-16 7.163-16 16v32c0 8.837 7.163 16 16 16h160c8.837 0 16-7.163 16-16v-32c0-8.837-7.163-16-16-16h-37.621V288H357.62v128H320c-8.837 0-16 7.163-16 16v32c0 8.837 7.163 16 16 16h160c8.837 0 16-7.163 16-16v-32c0-8.837-7.163-16-16-16h-37.275V96H480c8.837 0 16-7.163 16-16z"></path></svg><!-- <i class="fas fa-heading fa-lg"></i> -->
+																												</span>
+																											</a>
+																											<a class="button is-large">
+																												<span class="icon is-medium">
+																													<svg class="svg-inline--fa fa-heading fa-w-16 fa-2x" aria-hidden="true" data-prefix="fas" data-icon="heading" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M496 80V48c0-8.837-7.163-16-16-16H320c-8.837 0-16 7.163-16 16v32c0 8.837 7.163 16 16 16h37.621v128H154.379V96H192c8.837 0 16-7.163 16-16V48c0-8.837-7.163-16-16-16H32c-8.837 0-16 7.163-16 16v32c0 8.837 7.163 16 16 16h37.275v320H32c-8.837 0-16 7.163-16 16v32c0 8.837 7.163 16 16 16h160c8.837 0 16-7.163 16-16v-32c0-8.837-7.163-16-16-16h-37.621V288H357.62v128H320c-8.837 0-16 7.163-16 16v32c0 8.837 7.163 16 16 16h160c8.837 0 16-7.163 16-16v-32c0-8.837-7.163-16-16-16h-37.275V96H480c8.837 0 16-7.163 16-16z"></path></svg><!-- <i class="fas fa-heading fa-2x"></i> -->
+																												</span>
+																											</a>
+																										</p>
+
+																									</div>
+																									<div class="column">
+																										<figure class="highlight">
+																											<pre>
+<code class="language-html" data-lang="html"><span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"buttons"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;button</span> <span class="s">small</span><span class="nt">&gt;</span>
+<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"icon is-small"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"fas fa-heading"</span><span class="nt">&gt;&lt;/i&gt;</span>
+<span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"buttons"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;button</span><span class="nt">&gt;</span>
+<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"icon is-small"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"fas fa-heading"</span><span class="nt">&gt;&lt;/i&gt;</span>
+<span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span><span class="nt">&gt;</span>
+<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"icon"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"fas fa-heading fa-lg"</span><span class="nt">&gt;&lt;/i&gt;</span>
+<span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"buttons"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;button</span> <span class="s">medium</span><span class="nt">&gt;</span>
+<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"icon is-small"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"fas fa-heading"</span><span class="nt">&gt;&lt;/i&gt;</span>
+<span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="s">medium</span><span class="nt">&gt;</span>
+<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"icon"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"fas fa-heading fa-lg"</span><span class="nt">&gt;&lt;/i&gt;</span>
+<span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="s">medium</span><span class="nt">&gt;</span>
+<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"icon is-medium"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"fas fa-heading fa-2x"</span><span class="nt">&gt;&lt;/i&gt;</span>
+<span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"buttons"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;button</span> <span class="s">large</span><span class="nt">&gt;</span>
+<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"icon is-small"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"fas fa-heading"</span><span class="nt">&gt;&lt;/i&gt;</span>
+<span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="s">large</span><span class="nt">&gt;</span>
+<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"icon"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"fas fa-heading fa-lg"</span><span class="nt">&gt;&lt;/i&gt;</span>
+<span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="s">large</span><span class="nt">&gt;</span>
+<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"icon is-medium"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"fas fa-heading fa-2x"</span><span class="nt">&gt;&lt;/i&gt;</span>
+<span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;/p&gt;</span></code><button class="button is-small bd-copy">Copy</button><button class="button is-small bd-expand">Expand</button></pre>
+																											</figure>
+																											</div>
+																										</div>
+
+																										<hr class="hr" style="margin-bottom: 0;">
+
+
+
+
+																										<!-- FOOTER -->
+																										<div class="hero-foot">
+																											<div class="container">
+																												<div class="tabs is-centered">
+																													<ul>
+																														<li class="footer-text"><a href="https://www.aldiduzha.com" style="color:black;">Designed with&nbsp;<i class="fa fa-heart fa-fw" style="font-size: 16px; color:red;"></i>&nbsp;by Aldi Duzha</a></li>
+																													</ul>
+																												</div>
+																											</div>
+																										</div>
+																										<!-- Clipboard.js -->
+																										<script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+																									</body>
+
+																									</html>
