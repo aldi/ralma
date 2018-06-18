@@ -1,4 +1,4 @@
-## Ralma - Bulma plugin for Ractive.js
+## Ralma - Ractive plugin for Bulma
 
 This Ractive plugin provides helper shortcuts for most Bulma widgets.
 The goal of this plugin is to help you get started quickly and reduce the overly verbose code that Bulma tends to produce.
