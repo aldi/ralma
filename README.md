@@ -1,9 +1,9 @@
-## Ralma - Ractive plugin for Bulma
+## Ralma - Stateless Ractive Components for Bulma
 
 This Ractive plugin provides helper shortcuts for most Bulma widgets.
 The goal of this plugin is to help you get started quickly and reduce the overly verbose code that Bulma tends to produce.
 It does not attempt to cover everything in Bulma, but rather offer the most common elements as shortcuts.
-Sometimes, when you want something more specific or fancy, you can still use the original bootstrap markup.
+Sometimes, when you want something more specific or fancy, you can still use the original Bulma markup.
 
 **Download**:
 
@@ -23,7 +23,7 @@ A typical header would look like this:
 <!-- Ractive Framework -->
 <script src="https://cdn.jsdelivr.net/npm/ractive"></script>
 <!-- Ralma Plugin -->
-<script src="ralma.js"></script>
+<script src="ralma.min.js"></script>
 </head>
 ```
 
