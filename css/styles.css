@@ -1,6 +1,6 @@
 @charset "UTF-8";
 
-/*! bulma.io v0.7.1 | MIT License */
+/*! ralma */
 
 @-webkit-keyframes spinAround {
 	from {
@@ -7680,7 +7680,7 @@ label.panel-block:hover {
 
 .tabs ul {
 	align-items: center;
-	border-bottom-color: #dbdbdb;
+	border-bottom-color: #fff;
 	border-bottom-style: solid;
 	border-bottom-width: 1px;
 	display: flex;
