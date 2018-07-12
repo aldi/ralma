@@ -1,4 +1,4 @@
-![ralma_logo](!logo.png)
+![ralma_logo](logo.png)
 
 ## Ralma - Stateless Ractive Components for Bulma
 
