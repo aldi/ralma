@@ -1,3 +1,5 @@
+![ralma_logo](!logo.png)
+
 ## Ralma - Stateless Ractive Components for Bulma
 
 This Ractive plugin provides helper shortcuts for most Bulma widgets.
