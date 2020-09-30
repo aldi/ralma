@@ -3,15 +3,16 @@
 
 <head>
 	<meta charset='utf-8'>
-	<title>Ralma - Bulma plugin for Ractive.js</title>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.css">
+	<title>Ralma - Ractive Components for Bulma</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.1/css/bulma.css">
 	<link rel="stylesheet" href="../css/styles.css">
+	<script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
 	<script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
-	<script src='../js/main.js'></script>
+	<script defer src='../js/scripts.js'></script>
 </head>
 
 <body>
+<div class="hero-body" class="pb-1">
 	<a href="https://github.com/aldi/ralma"><img style="position: absolute; top: 0; left: 0; border: 0;" src="https://camo.githubusercontent.com/c6625ac1f3ee0a12250227cf83ce904423abf351/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f6c6566745f677261795f3664366436642e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_left_gray_6d6d6d.png"></a>
 
 	<div class="column has-text-centered">
@@ -23,7 +24,7 @@
 	<nav class="breadcrumb is-centered" aria-label="breadcrumbs">
 		<ul>
 			<li>
-				<a href="../index.html">
+				<a href="../../index.html">
 					<span class="icon is-small">
 						<i class="fas fa-home" aria-hidden="true"></i>
 					</span>
@@ -31,7 +32,7 @@
 				</a>
 			</li>
 			<li>
-				<a href="../index.html#elements">
+				<a href="../../index.html#elements">
 					<span class="icon is-small">
 						<i class="fas fa-puzzle-piece" aria-hidden="true"></i>
 					</span>
@@ -870,22 +871,23 @@
 				</figure>
 			</div>
 		</div>
-
-		<hr class="hr" style="margin-bottom: 0;">
-
+</div>
 
 
 
-		<!-- FOOTER -->
-		<div class="hero-foot">
-			<div class="container">
-				<div class="tabs is-centered">
-					<ul>
-						<li class="footer-text"><a href="https://www.aldiduzha.com" style="color:black;">Designed with&nbsp;<i class="fa fa-heart fa-fw" style="font-size: 16px; color:red;"></i>&nbsp;by Aldi Duzha</a></li>
-					</ul>
-				</div>
-			</div>
-		</div>
+
+    <hr />
+    <!-- FOOTER -->
+    <div class="hero-foot pb-5">
+      <div class="container has-text-centered">
+        <p class="footer-text">
+          <a href="https://www.aldiduzha.com?utm_source=Github" style="color: grey"
+            >Designed with <i class="fa fa-heart fa-fw" style="font-size: 10px; color: red"></i> by
+            Aldi Duzha</a
+          >
+        </p>
+      </div>
+    </div>
 		<!-- Clipboard.js -->
 		<script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
 </body>

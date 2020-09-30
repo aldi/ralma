@@ -1,7 +1,6 @@
 'use strict';
 
 document.addEventListener('DOMContentLoaded', function () {
-
   // Clipboard
 
   var $highlights = getAll('.highlight');
@@ -15,9 +14,13 @@ document.addEventListener('DOMContentLoaded', function () {
 
       var $parent = $el.parentNode;
       if ($parent && $parent.classList.contains('bd-is-more')) {
-        var showEl = '<button class="bd-show"><div><span class="icon"><i class="fas fa-code"></i></span> <strong>Show code</strong></div></button>';
+        var showEl =
+          '<button class="bd-show"><div><span class="icon"><i class="fas fa-code"></i></span> <strong>Show code</strong></div></button>';
         $el.insertAdjacentHTML('beforeend', showEl);
-      } else if ($el.firstElementChild.scrollHeight > 480 && $el.firstElementChild.clientHeight <= 480) {
+      } else if (
+        $el.firstElementChild.scrollHeight > 480 &&
+        $el.firstElementChild.clientHeight <= 480
+      ) {
         $el.insertAdjacentHTML('beforeend', expandEl);
       }
 
@@ -59,9 +62,9 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   new ClipboardJS('.bd-copy', {
-    target: function(trigger) {
+    target: function (trigger) {
       return trigger.previousElementSibling.firstElementChild;
-    }
+    },
   });
 
   // Functions
@@ -69,5 +72,4 @@ document.addEventListener('DOMContentLoaded', function () {
   function getAll(selector) {
     return Array.prototype.slice.call(document.querySelectorAll(selector), 0);
   }
-
 });
