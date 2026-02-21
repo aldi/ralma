@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Ralma - Dropdown</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css" integrity="sha384-DCY3M8xLkMu6c9IKcKbe+jHKMjelnwC0p+SBaxfHxoBYZWdJF2X400UdBCgATtAB" crossorigin="anonymous" />
+    <link rel="stylesheet" href="../css/styles.css" />
+    <script defer src="https://use.fontawesome.com/releases/v5.11.2/js/all.js" integrity="sha384-b3ua1l97aVGAPEIe48b4TC60WUQbQaGi2jqAWM90y0OZXZeyaTCWtBTKtjW2GXG1" crossorigin="anonymous"></script>
+    <script defer src="../js/scripts.js"></script>
+  </head>
+  <body>
+    <a href="https://github.com/aldi/ralma"
+      ><img
+        style="position: absolute; top: 0; left: 0; border: 0"
+        src="https://camo.githubusercontent.com/c6625ac1f3ee0a12250227cf83ce904423abf351/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f6c6566745f677261795f3664366436642e706e67"
+        alt="Fork me on GitHub"
+        data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_left_gray_6d6d6d.png"
+    /></a>
+
+    <div class="column has-text-centered">
+      <p class="title is-2">Ralma</p>
+      <p class="subtitle is-4">Ractive Components for Bulma</p>
+    </div>
+
+    <nav class="breadcrumb is-centered" aria-label="breadcrumbs">
+      <ul>
+        <li>
+          <a href="../../index.html">
+            <span class="icon is-small"><i class="fas fa-home" aria-hidden="true"></i></span>
+            <span>Ralma</span>
+          </a>
+        </li>
+        <li>
+          <a href="../../index.html#components">
+            <span class="icon is-small"><i class="fas fa-cubes" aria-hidden="true"></i></span>
+            <span>Components</span>
+          </a>
+        </li>
+        <li class="is-active"><a href="#" aria-current="page">Dropdown</a></li>
+      </ul>
+    </nav>
+
+    <header class="bd-header">
+      <div class="bd-header-titles">
+        <h1 class="title">Dropdown</h1>
+        <p class="subtitle is-4">Toggleable contextual overlays for lists of links/actions</p>
+      </div>
+    </header>
+
+    <section class="section pt-2">
+      <div class="container">
+        <div class="content">
+          <p>
+            Dropdowns require toggling the <code>is-active</code> class. This page shows an
+            <em>open</em> dropdown for demonstration.
+          </p>
+        </div>
+
+        <div class="bd-example" style="max-width: 420px">
+          <div class="dropdown is-active">
+            <div class="dropdown-trigger">
+              <button class="button" aria-haspopup="true" aria-controls="dropdown-menu-1" type="button">
+                <span>Dropdown</span>
+                <span class="icon is-small"><i class="fas fa-angle-down" aria-hidden="true"></i></span>
+              </button>
+            </div>
+            <div class="dropdown-menu" id="dropdown-menu-1" role="menu">
+              <div class="dropdown-content">
+                <a href="#" class="dropdown-item">Dropdown item</a>
+                <a href="#" class="dropdown-item">Other item</a>
+                <hr class="dropdown-divider" />
+                <a href="#" class="dropdown-item">With a divider</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <figure class="highlight">
+          <pre><code class="language-html">&lt;div class=&quot;dropdown is-active&quot;&gt;
+  &lt;div class=&quot;dropdown-trigger&quot;&gt;
+    &lt;button class=&quot;button&quot; aria-haspopup=&quot;true&quot; aria-controls=&quot;dropdown-menu-1&quot; type=&quot;button&quot;&gt;
+      &lt;span&gt;Dropdown&lt;/span&gt;
+      &lt;span class=&quot;icon is-small&quot;&gt;&lt;i class=&quot;fas fa-angle-down&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;/span&gt;
+    &lt;/button&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;dropdown-menu&quot; id=&quot;dropdown-menu-1&quot; role=&quot;menu&quot;&gt;
+    &lt;div class=&quot;dropdown-content&quot;&gt;
+      &lt;a href=&quot;#&quot; class=&quot;dropdown-item&quot;&gt;Dropdown item&lt;/a&gt;
+      &lt;a href=&quot;#&quot; class=&quot;dropdown-item&quot;&gt;Other item&lt;/a&gt;
+      &lt;hr class=&quot;dropdown-divider&quot; /&gt;
+      &lt;a href=&quot;#&quot; class=&quot;dropdown-item&quot;&gt;With a divider&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+        </figure>
+
+        <div class="content">
+          <p><strong>Ralma</strong> template example:</p>
+        </div>
+
+        <figure class="highlight">
+          <pre><code class="language-html">&lt;dropdown active&gt;
+  &lt;dropdown-trigger&gt;
+    &lt;dropdown-button ariaControls=&quot;dropdown-menu-1&quot;&gt;Dropdown&lt;/dropdown-button&gt;
+  &lt;/dropdown-trigger&gt;
+  &lt;dropdown-menu id=&quot;dropdown-menu-1&quot;&gt;
+    &lt;dropdown-content&gt;
+      &lt;dropdown-item href=&quot;#&quot;&gt;Dropdown item&lt;/dropdown-item&gt;
+      &lt;dropdown-item href=&quot;#&quot;&gt;Other item&lt;/dropdown-item&gt;
+      &lt;dropdown-divider /&gt;
+      &lt;dropdown-item href=&quot;#&quot;&gt;With a divider&lt;/dropdown-item&gt;
+    &lt;/dropdown-content&gt;
+  &lt;/dropdown-menu&gt;
+&lt;/dropdown&gt;</code></pre>
+        </figure>
+      </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js" integrity="sha384-J08i8An/QeARD9ExYpvphB8BsyOj3Gh2TSh1aLINKO3L0cMSH2dN3E22zFoXEi0Q" crossorigin="anonymous"></script>
+  </body>
+</html>

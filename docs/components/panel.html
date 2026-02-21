@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Ralma - Panel</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css" integrity="sha384-DCY3M8xLkMu6c9IKcKbe+jHKMjelnwC0p+SBaxfHxoBYZWdJF2X400UdBCgATtAB" crossorigin="anonymous" />
+    <link rel="stylesheet" href="../css/styles.css" />
+    <script defer src="https://use.fontawesome.com/releases/v5.11.2/js/all.js" integrity="sha384-b3ua1l97aVGAPEIe48b4TC60WUQbQaGi2jqAWM90y0OZXZeyaTCWtBTKtjW2GXG1" crossorigin="anonymous"></script>
+    <script defer src="../js/scripts.js"></script>
+  </head>
+  <body>
+    <a href="https://github.com/aldi/ralma"
+      ><img
+        style="position: absolute; top: 0; left: 0; border: 0"
+        src="https://camo.githubusercontent.com/c6625ac1f3ee0a12250227cf83ce904423abf351/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f6c6566745f677261795f3664366436642e706e67"
+        alt="Fork me on GitHub"
+        data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_left_gray_6d6d6d.png"
+    /></a>
+
+    <div class="column has-text-centered">
+      <p class="title is-2">Ralma</p>
+      <p class="subtitle is-4">Ractive Components for Bulma</p>
+    </div>
+
+    <nav class="breadcrumb is-centered" aria-label="breadcrumbs">
+      <ul>
+        <li>
+          <a href="../../index.html">
+            <span class="icon is-small"><i class="fas fa-home" aria-hidden="true"></i></span>
+            <span>Ralma</span>
+          </a>
+        </li>
+        <li>
+          <a href="../../index.html#components">
+            <span class="icon is-small"><i class="fas fa-cubes" aria-hidden="true"></i></span>
+            <span>Components</span>
+          </a>
+        </li>
+        <li class="is-active"><a href="#" aria-current="page">Panel</a></li>
+      </ul>
+    </nav>
+
+    <header class="bd-header">
+      <div class="bd-header-titles">
+        <h1 class="title">Panel</h1>
+        <p class="subtitle is-4">A composable side panel with blocks and tabs</p>
+      </div>
+    </header>
+
+    <section class="section pt-2">
+      <div class="container">
+        <div class="bd-example" style="max-width: 420px">
+          <nav class="panel">
+            <p class="panel-heading">Repositories</p>
+            <p class="panel-tabs">
+              <a class="is-active" href="#">All</a>
+              <a href="#">Public</a>
+              <a href="#">Private</a>
+            </p>
+            <a class="panel-block is-active" href="#">
+              <span class="panel-icon"><i class="fas fa-book" aria-hidden="true"></i></span>
+              bulma
+            </a>
+            <a class="panel-block" href="#">
+              <span class="panel-icon"><i class="fas fa-book" aria-hidden="true"></i></span>
+              ralma
+            </a>
+          </nav>
+        </div>
+
+        <figure class="highlight">
+          <pre><code class="language-html">&lt;nav class=&quot;panel&quot;&gt;
+  &lt;p class=&quot;panel-heading&quot;&gt;Repositories&lt;/p&gt;
+  &lt;p class=&quot;panel-tabs&quot;&gt;
+    &lt;a class=&quot;is-active&quot; href=&quot;#&quot;&gt;All&lt;/a&gt;
+    &lt;a href=&quot;#&quot;&gt;Public&lt;/a&gt;
+    &lt;a href=&quot;#&quot;&gt;Private&lt;/a&gt;
+  &lt;/p&gt;
+  &lt;a class=&quot;panel-block is-active&quot; href=&quot;#&quot;&gt;
+    &lt;span class=&quot;panel-icon&quot;&gt;&lt;i class=&quot;fas fa-book&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;/span&gt;
+    bulma
+  &lt;/a&gt;
+&lt;/nav&gt;</code></pre>
+        </figure>
+
+        <div class="content">
+          <p><strong>Ralma</strong> template example:</p>
+        </div>
+
+        <figure class="highlight">
+          <pre><code class="language-html">&lt;panel&gt;
+  &lt;panel-heading&gt;Repositories&lt;/panel-heading&gt;
+  &lt;panel-tabs&gt;
+    &lt;a class=&quot;is-active&quot; href=&quot;#&quot;&gt;All&lt;/a&gt;
+    &lt;a href=&quot;#&quot;&gt;Public&lt;/a&gt;
+    &lt;a href=&quot;#&quot;&gt;Private&lt;/a&gt;
+  &lt;/panel-tabs&gt;
+  &lt;panel-block href=&quot;#&quot; active&gt;
+    &lt;panel-icon&gt;&lt;i class=&quot;fas fa-book&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;/panel-icon&gt;
+    bulma
+  &lt;/panel-block&gt;
+&lt;/panel&gt;</code></pre>
+        </figure>
+      </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js" integrity="sha384-J08i8An/QeARD9ExYpvphB8BsyOj3Gh2TSh1aLINKO3L0cMSH2dN3E22zFoXEi0Q" crossorigin="anonymous"></script>
+  </body>
+</html>
+

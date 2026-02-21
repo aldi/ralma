@@ -2,7 +2,7 @@
 
 ## Ralma - Stateless Ractive Components for Bulma
 
-![version](https://img.shields.io/badge/version-0.2.2-informational)
+![version](https://img.shields.io/badge/version-0.3.0-informational)
 
 This Ractive plugin provides helper shortcuts for most Bulma widgets.
 The goal of this plugin is to help you get started quickly and reduce the overly verbose code that Bulma tends to produce.

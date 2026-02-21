@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Ralma - Message</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css" integrity="sha384-DCY3M8xLkMu6c9IKcKbe+jHKMjelnwC0p+SBaxfHxoBYZWdJF2X400UdBCgATtAB" crossorigin="anonymous" />
+    <link rel="stylesheet" href="../css/styles.css" />
+    <script defer src="https://use.fontawesome.com/releases/v5.11.2/js/all.js" integrity="sha384-b3ua1l97aVGAPEIe48b4TC60WUQbQaGi2jqAWM90y0OZXZeyaTCWtBTKtjW2GXG1" crossorigin="anonymous"></script>
+    <script defer src="../js/scripts.js"></script>
+  </head>
+  <body>
+    <a href="https://github.com/aldi/ralma"
+      ><img
+        style="position: absolute; top: 0; left: 0; border: 0"
+        src="https://camo.githubusercontent.com/c6625ac1f3ee0a12250227cf83ce904423abf351/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f6c6566745f677261795f3664366436642e706e67"
+        alt="Fork me on GitHub"
+        data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_left_gray_6d6d6d.png"
+    /></a>
+
+    <div class="column has-text-centered">
+      <p class="title is-2">Ralma</p>
+      <p class="subtitle is-4">Ractive Components for Bulma</p>
+    </div>
+
+    <nav class="breadcrumb is-centered" aria-label="breadcrumbs">
+      <ul>
+        <li>
+          <a href="../../index.html">
+            <span class="icon is-small"><i class="fas fa-home" aria-hidden="true"></i></span>
+            <span>Ralma</span>
+          </a>
+        </li>
+        <li>
+          <a href="../../index.html#components">
+            <span class="icon is-small"><i class="fas fa-cubes" aria-hidden="true"></i></span>
+            <span>Components</span>
+          </a>
+        </li>
+        <li class="is-active"><a href="#" aria-current="page">Message</a></li>
+      </ul>
+    </nav>
+
+    <header class="bd-header">
+      <div class="bd-header-titles">
+        <h1 class="title">Message</h1>
+        <p class="subtitle is-4">Colored message blocks with optional header</p>
+      </div>
+    </header>
+
+    <section class="section pt-2">
+      <div class="container">
+        <div class="bd-example" style="max-width: 560px">
+          <article class="message is-info">
+            <div class="message-header">
+              <p>Info</p>
+              <button class="delete" aria-label="delete" type="button"></button>
+            </div>
+            <div class="message-body">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            </div>
+          </article>
+        </div>
+
+        <figure class="highlight">
+          <pre><code class="language-html">&lt;article class=&quot;message is-info&quot;&gt;
+  &lt;div class=&quot;message-header&quot;&gt;
+    &lt;p&gt;Info&lt;/p&gt;
+    &lt;button class=&quot;delete&quot; aria-label=&quot;delete&quot; type=&quot;button&quot;&gt;&lt;/button&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;message-body&quot;&gt;
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+  &lt;/div&gt;
+&lt;/article&gt;</code></pre>
+        </figure>
+
+        <div class="content">
+          <p><strong>Ralma</strong> template example:</p>
+        </div>
+
+        <figure class="highlight">
+          <pre><code class="language-html">&lt;message info&gt;
+  &lt;message-header&gt;
+    &lt;p&gt;Info&lt;/p&gt;
+    &lt;button class=&quot;delete&quot; aria-label=&quot;delete&quot; type=&quot;button&quot;&gt;&lt;/button&gt;
+  &lt;/message-header&gt;
+  &lt;message-body&gt;
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+  &lt;/message-body&gt;
+&lt;/message&gt;</code></pre>
+        </figure>
+      </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js" integrity="sha384-J08i8An/QeARD9ExYpvphB8BsyOj3Gh2TSh1aLINKO3L0cMSH2dN3E22zFoXEi0Q" crossorigin="anonymous"></script>
+  </body>
+</html>
+

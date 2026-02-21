@@ -1,12 +1,3 @@
-/* Ralma v0.3.0 */
-(function (global) {
-  'use strict';
-
-  const ractive = global.Ractive;
-  if (!ractive) {
-    throw new Error('Ralma: window.Ractive is required before loading ralma.js');
-  }
-
 const REGISTRY_MARKER =
   typeof Symbol === 'function' ? Symbol.for('ralma.__registered__') : '__ralma_registered__';
 const UNSAFE_HREF_SCHEME_PATTERN = /^\s*(?:javascript|data|vbscript):/i;
@@ -473,6 +464,7 @@ const runtimeComponentEntries = componentEntries.map(([name, definition]) => [
   name,
   hrefAwareComponentNames.has(name) ? withSafeHref(definition) : definition,
 ]);
+export const componentNames = Object.freeze(componentEntries.map(([name]) => name));
 
 function sanitizeHref(href) {
   if (typeof href !== 'string') return null;
@@ -517,7 +509,16 @@ function withSafeHref(definition) {
   };
 }
 
-function registerRalma(ractive, options = {}) {
+/**
+ * Registers Ralma components onto a Ractive constructor.
+ *
+ * @param {unknown} ractive - The `Ractive` constructor (global or imported).
+ * @param {{overwrite?: boolean, warnOnCollision?: boolean}} [options]
+ *  - `overwrite`: overwrite already-registered component names.
+ *  - `warnOnCollision`: emit console warnings when a name is skipped.
+ * @returns {unknown} The same `Ractive` reference.
+ */
+export function registerRalma(ractive, options = {}) {
   if (ractive == null || (typeof ractive !== 'object' && typeof ractive !== 'function')) {
     throw new TypeError('registerRalma(Ractive): Ractive must be an object or function');
   }
@@ -561,7 +562,3 @@ function registerRalma(ractive, options = {}) {
   });
   return ractive;
 }
-
-
-  registerRalma(ractive);
-})(typeof window !== 'undefined' ? window : globalThis);

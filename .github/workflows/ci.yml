@@ -1,0 +1,39 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install
+        run: npm ci
+
+      - name: Test
+        run: npm test
+
+      - name: Build (esbuild minifier path)
+        run: npm run build
+        env:
+          RALMA_BUILD_MINIFIER: esbuild
+
+      - name: Build (fallback minifier path)
+        run: npm run build
+        env:
+          RALMA_BUILD_MINIFIER: fallback
+
+      - name: Ensure generated files are up to date
+        run: git diff --exit-code -- bin/ralma.js bin/ralma.min.js
+
+      - name: Formatting sanity check
+        run: npm run format:check
