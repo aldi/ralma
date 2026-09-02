@@ -1,0 +1,11 @@
+# Generated bundles — owned by tools/build.mjs.
+bin/
+
+# Docs build output.
+docs/.next/
+docs/out/
+
+node_modules/
+output/
+types/
+package-lock.json

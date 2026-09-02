@@ -1,0 +1,95 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        # 22 = maintenance LTS (EOL 2027-04), 24 = active LTS, 26 = current.
+        node-version: [22, 24, 26]
+    steps:
+      - name: Checkout
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+
+      - name: Setup Node
+        uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: npm
+
+      - name: Install
+        run: npm ci
+
+      - name: Audit dependencies
+        if: matrix.node-version == 24
+        run: npm run audit
+
+      - name: Test
+        run: npm test
+
+      - name: Build
+        run: npm run build
+
+      # Artifact and style checks are version-independent; run them on one leg only.
+      - name: Ensure generated files are up to date
+        if: matrix.node-version == 24
+        run: git diff --exit-code -- bin/ralma.js bin/ralma.min.js
+
+      - name: Bundle size check
+        if: matrix.node-version == 24
+        run: npm run size:check
+
+      - name: Typecheck
+        if: matrix.node-version == 24
+        run: npm run typecheck
+
+      - name: Lint
+        if: matrix.node-version == 24
+        run: npm run lint
+
+      - name: Formatting sanity check
+        if: matrix.node-version == 24
+        run: npm run format:check
+
+      - name: Coverage
+        if: matrix.node-version == 24
+        run: npm run test:coverage
+
+  docs:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+
+      - name: Setup Node
+        uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+        with:
+          # docs/ pins its own Node version; next.config.mjs also reads ../package.json,
+          # so the repo root must be checked out (it is).
+          node-version-file: docs/.nvmrc
+          cache: npm
+          cache-dependency-path: docs/package-lock.json
+
+      - name: Install
+        run: npm run docs:install
+
+      - name: Audit dependencies
+        run: npm --prefix docs run audit
+
+      - name: Lint
+        run: npm run docs:lint
+
+      - name: Build
+        run: npm run docs:build

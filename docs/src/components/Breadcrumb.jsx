@@ -1,0 +1,23 @@
+import Link from 'next/link';
+
+export default function Breadcrumb({ items }) {
+  return (
+    <nav className="breadcrumb" aria-label="breadcrumbs">
+      <ul>
+        {items.map((item, index) => (
+          <li key={index} className={item.active ? 'is-active' : ''}>
+            {item.active ? (
+              <span className="breadcrumb-current" aria-current="page">
+                {item.label}
+              </span>
+            ) : item.href ? (
+              <Link href={item.href}>{item.label}</Link>
+            ) : (
+              <p className="pl-3">{item.label}</p>
+            )}
+          </li>
+        ))}
+      </ul>
+    </nav>
+  );
+}

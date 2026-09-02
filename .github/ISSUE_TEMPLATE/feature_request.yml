@@ -1,0 +1,47 @@
+name: Feature request
+description: Propose a new component, or a new option on an existing one.
+labels: [enhancement]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Ralma covers the most common Bulma widgets, not all of Bulma. For anything specific or
+        unusual, writing the original Bulma markup by hand is often the better answer — that's a
+        deliberate scope decision, not a gap.
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: What's verbose or awkward today?
+      description: Show the Bulma markup you're writing by hand and would rather not.
+      render: html
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed component or option
+      description: What the Ralma version would look like.
+      render: html
+    validations:
+      required: true
+
+  - type: input
+    id: bulma-docs
+    attributes:
+      label: Bulma documentation link
+      description: The Bulma page for the widget this wraps.
+      placeholder: https://bulma.io/documentation/components/...
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: constraints
+    attributes:
+      label: Constraints
+      options:
+        - label: This needs no runtime dependencies (Ralma has zero and intends to keep it that way)
+          required: true
+        - label: This is stateless — it renders from bound data and holds no internal state
+          required: true

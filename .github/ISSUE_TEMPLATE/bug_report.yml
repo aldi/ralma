@@ -1,0 +1,65 @@
+name: Bug report
+description: A component renders the wrong markup, or the plugin misbehaves.
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        For a security vulnerability, do **not** file here — see
+        [SECURITY.md](https://github.com/aldi/ralma/blob/master/SECURITY.md).
+
+  - type: input
+    id: component
+    attributes:
+      label: Component
+      description: Which Ralma component? Leave blank if it's `registerRalma` itself or the build.
+      placeholder: navbar-link
+    validations:
+      required: false
+
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Reproduction
+      description: The template and the data you bound to it. Smallest version that still shows the problem.
+      render: html
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual output
+      description: The HTML you got.
+      render: html
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected output
+      description: The HTML you expected instead.
+      render: html
+    validations:
+      required: true
+
+  - type: input
+    id: versions
+    attributes:
+      label: Versions
+      description: Ralma, Ractive, and Bulma versions. Include Node and browser if relevant.
+      placeholder: ralma 1.0.0, ractive 1.4.4, bulma 1.0.2
+    validations:
+      required: true
+
+  - type: dropdown
+    id: how-loaded
+    attributes:
+      label: How is Ralma loaded?
+      options:
+        - npm package (`import { registerRalma } from 'ralma'`)
+        - Browser bundle (`bin/ralma.js`)
+        - Browser bundle, minified (`bin/ralma.min.js`)
+    validations:
+      required: true

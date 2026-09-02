@@ -1,19 +1,49 @@
-<img src="logo.png" alt="ralma_logo" width="200px"/>
+<img src="https://raw.githubusercontent.com/aldi/ralma/master/logo.png" alt="ralma_logo" width="200px"/>
 
 ## Ralma - Stateless Ractive Components for Bulma
 
-![version](https://img.shields.io/badge/version-0.2.2-informational)
+[![npm](https://img.shields.io/npm/v/ralma)](https://www.npmjs.com/package/ralma)
+[![CI](https://github.com/aldi/ralma/actions/workflows/ci.yml/badge.svg)](https://github.com/aldi/ralma/actions/workflows/ci.yml)
+[![license](https://img.shields.io/npm/l/ralma)](LICENSE)
 
 This Ractive plugin provides helper shortcuts for most Bulma widgets.
 The goal of this plugin is to help you get started quickly and reduce the overly verbose code that Bulma tends to produce.
 It does not attempt to cover everything in Bulma, but rather offer the most common elements as shortcuts.
 Sometimes, when you want something more specific or fancy, you can still use the original Bulma markup.
 
-**Download**:
+## Install
+
+```bash
+npm install ralma
+```
+
+```js
+import Ractive from 'ractive';
+import { registerRalma } from 'ralma';
+
+registerRalma(Ractive);
+```
+
+Package-based projects require Node 22 or newer and Ractive 1.4.4 or newer. Components use Bulma
+1.x classes; load Bulma CSS separately.
+
+`registerRalma` skips names already present on `Ractive.components`; pass `{ overwrite: true }` to
+replace them, or `{ warnOnCollision: true }` to log the ones it skipped.
+
+**Or download the browser bundle**, which registers every component against `window.Ractive` on load:
 
 _Debug_: [bin/ralma.js](https://raw.githubusercontent.com/aldi/ralma/master/bin/ralma.js)
 
 _Minified_: [bin/ralma.min.js](https://raw.githubusercontent.com/aldi/ralma/master/bin/ralma.min.js)
+
+## Documentation
+
+The primary docs are now a Next.js app in `docs/`.
+
+```bash
+npm run docs:install
+npm run docs:dev
+```
 
 A typical header would look like this:
 
@@ -23,7 +53,7 @@ A typical header would look like this:
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ralma!</title>
   <!-- Bulma CSS -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1/css/bulma.min.css" />
   <!-- Ractive Framework -->
   <script src="https://cdn.jsdelivr.net/npm/ractive"></script>
   <!-- Ralma Plugin -->
