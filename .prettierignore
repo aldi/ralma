@@ -1,9 +1,8 @@
 # Generated bundles — owned by tools/build.mjs.
 bin/
 
-# Legacy static documentation.
+# Documentation uses its own toolchain.
 docs/
-index.html
 
 node_modules/
 output/

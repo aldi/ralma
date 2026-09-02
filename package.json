@@ -55,6 +55,10 @@
     "lint:fix": "eslint . --fix",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
+    "docs:install": "npm --prefix docs ci",
+    "docs:dev": "npm --prefix docs run dev",
+    "docs:build": "npm --prefix docs run build",
+    "docs:lint": "npm --prefix docs run lint",
     "version": "npm run build",
     "prepack": "npm test && npm run build && npm run lint && npm run typecheck && npm run format:check"
   },
