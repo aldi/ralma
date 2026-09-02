@@ -274,6 +274,19 @@ test('every component rendering an href is registered as href-aware', () => {
   }
 });
 
+test('docs catalog lists exactly the registered components', async () => {
+  const { allComponentNames } = await import('../docs/src/data/ralmaCatalog.js');
+
+  const documented = new Set(allComponentNames);
+  const registered = new Set(componentNames);
+
+  const undocumented = componentNames.filter((name) => !documented.has(name));
+  const stale = allComponentNames.filter((name) => !registered.has(name));
+
+  assert.deepEqual(undocumented, [], 'components missing from docs/src/data/ralmaCatalog.js');
+  assert.deepEqual(stale, [], 'docs catalog lists components that are not registered');
+});
+
 test('package metadata preserves the public release contract', async () => {
   const packageJson = JSON.parse(
     await readFile(new URL('../package.json', import.meta.url), 'utf8'),
