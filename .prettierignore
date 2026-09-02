@@ -1,0 +1,11 @@
+# Generated bundles — owned by tools/build.mjs.
+bin/
+
+# Legacy static documentation.
+docs/
+index.html
+
+node_modules/
+output/
+types/
+package-lock.json

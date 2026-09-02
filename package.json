@@ -1,0 +1,76 @@
+{
+  "name": "@aldi/ralma",
+  "version": "0.2.2",
+  "description": "Stateless Ractive components for Bulma",
+  "license": "MIT",
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aldi/ralma.git"
+  },
+  "keywords": [
+    "ractive",
+    "ractive-plugin",
+    "bulma",
+    "components",
+    "ui",
+    "css"
+  ],
+  "homepage": "https://aldi.github.io/ralma",
+  "bugs": {
+    "url": "https://github.com/aldi/ralma/issues"
+  },
+  "author": "aldi",
+  "sideEffects": [
+    "./bin/ralma.js",
+    "./bin/ralma.min.js"
+  ],
+  "files": [
+    "src/",
+    "bin/",
+    "types/"
+  ],
+  "exports": {
+    ".": {
+      "types": "./types/index.d.ts",
+      "default": "./src/index.js"
+    },
+    "./browser": "./bin/ralma.js",
+    "./min": "./bin/ralma.min.js"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  },
+  "scripts": {
+    "test": "node --test",
+    "test:coverage": "node --test --experimental-test-coverage",
+    "build": "node ./tools/build.mjs && npm run build:types",
+    "build:types": "tsc --project tsconfig.build.json",
+    "typecheck": "tsc --project tsconfig.json",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "prepack": "npm test && npm run build && npm run lint && npm run typecheck && npm run format:check"
+  },
+  "overrides": {
+    "brace-expansion": "^5.0.9"
+  },
+  "peerDependencies": {
+    "ractive": "^1.4.4"
+  },
+  "devDependencies": {
+    "@eslint/js": "9.39.5",
+    "@types/node": "26.4.1",
+    "esbuild": "^0.28.2",
+    "eslint": "9.39.5",
+    "globals": "17.12.0",
+    "prettier": "3.9.6",
+    "ractive": "^1.4.4",
+    "typescript": "7.0.2"
+  }
+}
