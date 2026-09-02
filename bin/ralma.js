@@ -1,4 +1,4 @@
-/* Ralma v0.2.2 */
+/* Ralma v1.0.0 */
 (() => {
   var __defProp = Object.defineProperty;
   var __defProps = Object.defineProperties;
