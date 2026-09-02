@@ -55,6 +55,7 @@
     "lint:fix": "eslint . --fix",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
+    "version": "npm run build",
     "prepack": "npm test && npm run build && npm run lint && npm run typecheck && npm run format:check"
   },
   "overrides": {
